@@ -10,6 +10,6 @@
 3.Data structure implement of queue(major in bottom up heap, top down may be faster little bit in this case, but for convenient use  bottom up heap)\
 4.Graph implement: how to design the matrix and faster to access and add the edge of it\
 5.srand using method \
-6.Dijsktra\'92s algorithm detaill( if not implement it before , it\'92\'92ll find some mistakes are easy ignore)\
+6.Dijkstra\'92s algorithm detaill( if not implement it before , it\'92\'92ll find some mistakes are easy ignore)\
 7.The structure of Make file content\
 }
