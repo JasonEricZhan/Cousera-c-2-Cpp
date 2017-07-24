@@ -19,7 +19,7 @@ ShortestPath::ShortestPath()
 void ShortestPath::back_track(int start,int parent,vector<vertex> &vertexMatrix)
 {
     //cout<<parent<<endl;
-    pathQueue.push_back(parent);
+    pathQueue.insert(pathQueue.begin(),parent);
     if(start==parent)
     {
         return;
@@ -96,7 +96,7 @@ int ShortestPath::path_size(graph &g,int v1,int v2)
     path(g,v1,v2);
     if(g.vertexMatrix[v2].parent!=-1)
     {
-        if(pathQueue[0]!=v2 || pathQueue.back()!=v1)
+        if(pathQueue[0]!=v1 || pathQueue.back()!=v2)
         {
             cout<<"build the shortestpath first"<<endl;
         }
