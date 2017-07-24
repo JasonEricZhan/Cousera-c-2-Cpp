@@ -1,2 +1,2 @@
-# Dijkstra's algorithm
+# Cousera-c-to-cpp
 
