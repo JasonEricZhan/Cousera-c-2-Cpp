@@ -12,8 +12,6 @@
 #include <ctime>
 #include <cstdlib>
 //time in c
-#include <stdio.h>      /* printf, NULL */
-#include <stdlib.h>     /* srand, rand */
 #include <time.h>
 //
 #include <limits>
