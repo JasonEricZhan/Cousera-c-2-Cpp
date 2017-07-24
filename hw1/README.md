@@ -1,1 +1,1 @@
-# Cousera-c-to-c-
+# Dijkstra's algorithm
