@@ -61,12 +61,12 @@ graph::graph(int verticeNum)
     
     adMatrix = vector<vector<int> >(verticeNum, vector<int>(verticeNum));
     costMatrix = vector<vector<double> >(verticeNum, vector<double>(verticeNum));
-    vertexMatrix=vector<vertex>(verticeNum);
+    vertexqueue=vector<vertex>(verticeNum);
     int n=static_cast<int>(costMatrix.size());
     for(int i=0;i<n;i++)
     {
-        vertexMatrix[i].parent=-1;
-        vertexMatrix[i].distance=numeric_limits<double>::infinity();
+        vertexqueue[i].parent=-1;
+        vertexqueue[i].distance=numeric_limits<double>::infinity();
         for(int j=0;j<n;j++)
         {
             if(i==j)
@@ -92,12 +92,12 @@ graph::graph(int verticeNum, double density)
     adMatrix = vector<vector<int> >(verticeNum, vector<int>(verticeNum));
     //std::vector<std::vector<int>> array_2d(rows, std::vector<int>(cols, 0))
     costMatrix = vector<vector<double> >(verticeNum, vector<double>(verticeNum));
-    vertexMatrix=vector<vertex>(verticeNum);
+    vertexqueue=vector<vertex>(verticeNum);
     int n=static_cast<int>(costMatrix.size());
     for(int i=0;i<n;i++)
     {
-       vertexMatrix[i].parent=-1;
-       vertexMatrix[i].distance=numeric_limits<double>::infinity();
+       vertexqueue[i].parent=-1;
+       vertexqueue[i].distance=numeric_limits<double>::infinity();
         for(int j=0;j<n;j++)
         {
         
