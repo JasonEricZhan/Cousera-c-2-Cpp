@@ -24,7 +24,7 @@ int main()
         class graph graph(verticeNum, densities[i]);
         
         cout<<"graph "<<i<<endl;
-        for (int n=1; n<10; n++)
+        for (int n=1; n<50; n++)
         {
             ShortestPath sp;
             int pathSize=sp.path_size(graph,0,n);
