@@ -45,7 +45,7 @@ void relax(int u,int v,vector<vector<double> > &costMatrix,vector<vertex> &verte
 void ShortestPath::path(graph &g,int v1,int v2)
 {
     //cout<<"start"<<endl;
-    //Dijakstra:
+    //Dijkstra's algo:
     int n=static_cast<int>(g.costMatrix.size());
     PriorityQueue *p=new PriorityQueue;
     for(int i = v1+1;i<v2+1;i++)
