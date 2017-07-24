@@ -114,7 +114,6 @@ graph::graph(int verticeNum, double density)
     }
     srand(time(0));
     const int RANGE = 10;
-    int daig=0;
     for (int i=0; i<verticeNum; i++)
     {
         
