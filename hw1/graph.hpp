@@ -38,9 +38,11 @@ public:
 
     int edge_num;
     
+
+    std::vector<vertex> vertexqueue;
+private:
     std::vector<std::vector<int> > adMatrix;
     std::vector<std::vector<double> > costMatrix;
-    std::vector<vertex> vertexMatrix;
     
     ~graph();
 };
