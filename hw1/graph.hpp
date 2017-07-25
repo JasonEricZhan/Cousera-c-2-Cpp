@@ -33,7 +33,7 @@ public:
     void delete_edge(int v1,int v2);
     int getedge_value(int v1,int v2);
     void setedge_value(int v1,int v2,int value);
-    
+    ~graph();
 
 
     int edge_num;
@@ -44,7 +44,7 @@ private:
     std::vector<std::vector<int> > adMatrix;
     std::vector<std::vector<double> > costMatrix;
     
-    ~graph();
+
 };
 
 
