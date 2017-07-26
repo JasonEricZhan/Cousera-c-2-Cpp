@@ -19,23 +19,6 @@
 using namespace std;
 
 
-int compute(const vector<vector<double> > costmatrix)
-{
-    int sum=0;
-    for(int i=0;i<costmatrix.size();i++)
-    {
-        for(int j=0;j<costmatrix.size();j++)
-        {
-            if(costmatrix[i][j]!=numeric_limits<double>::infinity())
-            {
-                sum+=1;
-            }
-        }
-    }
-    return sum/2;
-}
-
-
 void graph::add_edge(int v1,int v2,int cost)
 {
     if(costMatrix[v1][v2]!=numeric_limits<double>::infinity())
@@ -141,7 +124,19 @@ int graph::vertex_number()
 
 int graph::edge_number()
 {
-    edge_num=compute(costMatrix);
+    
+    int sum=0;
+    for(int i=0;i<adMatrix.size();i++)
+    {
+        for(int j=0;j<i+1;j++)
+        {
+            if(adMatrix[i][j]==1)
+            {
+                sum+=1;
+            }
+        }
+    }
+    edge_num=sum;
     return edge_num;
     
 }
