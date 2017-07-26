@@ -36,7 +36,7 @@ int main()
             }
         }
         
-        cout << "For the graph with density = " << densities[i];
+        cout << "For the graph "<<i<<" with density = " << densities[i];
         cout << ", the average path length = " <<
         (static_cast<double>(sum) / count) << endl;
     }
