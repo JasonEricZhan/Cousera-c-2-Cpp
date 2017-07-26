@@ -14,10 +14,10 @@ using namespace std;
 
 int main()
 {
-    double densities[3] = {0.2, 0.4, 0.5};
+    double densities[3] = {0.3, 0.4, 0.5,0.6};
     int verticeNum = 50;
     
-    for (int i=0; i<3; i++)
+    for (int i=0; i<4; i++)
     {
         int sum = 0;
         int count = 0;
