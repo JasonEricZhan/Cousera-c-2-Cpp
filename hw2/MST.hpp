@@ -13,7 +13,7 @@
 #include"graph.hpp"
 #include"kruskal_algo.hpp"
 
-class MST:public graph
+class MST:protected graph
 {
 public:
     MST(){}
