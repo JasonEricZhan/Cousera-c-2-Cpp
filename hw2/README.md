@@ -1,1 +1,1 @@
-#Kruskal minimum spanning tree
+# kruskal minimum spanning tree algorithm
