@@ -26,6 +26,7 @@ void disjointset::unionSets(int x, int y)
     }
     else
     {
+        //rank by height
         int height1=findheight(x);
         int height2=findheight(y);
         if(height1>height2)
