@@ -53,7 +53,7 @@ int disjointset::findSet(int x)
     // compress the path
     for (auto it = temp.begin(); it != temp.end(); ++it)
     {
-        *it= x;
+        *it= x;  //be careful is element
     }
     
     return x;
