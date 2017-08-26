@@ -1,4 +1,4 @@
-# Cousera-c-to-cpp
+# Cousera-c-to-c++
 
 IN 2017 summer
 
