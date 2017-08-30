@@ -28,15 +28,15 @@ int main(int argc, const char * argv[]) {
     if ( infile.is_open() )
     {
         //read the file and initailize the graph;
-        class graph g(infile);
-        g.show();   // show the graph matrix
+        class graph *g=new class graph(infile);
+        g->show();   // show the graph matrix
         class kruskal MST;
-        cost=MST.generateMST(g, MSTedges);  
+        cost=MST.generateMST(*g, MSTedges);  
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        g=*new class MST(g.vertex_number(),MSTedges); // polymorphism with minimum spanning tree
-        g.show();
+        g=new class MST(g->vertex_number(),MSTedges); // polymorphism with minimum spanning tree
+        g->show();
 
     }
     else
