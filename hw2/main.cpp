@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        g=*new class MST(g.vertex_number(),MSTedges); // derivated
+        g=*new class MST(g.vertex_number(),MSTedges); // polymorphism
         g.show();
 
     }
