@@ -30,8 +30,8 @@ int main(int argc, const char * argv[]) {
         //read the file and initailize the graph;
         class graph *g=new class graph(infile);
         g->show();   // show the graph matrix
-        class kruskal MST;
-        cost=MST.generateMST(*g, MSTedges);  
+        class kruskal MSTalgo;
+        cost=MSTalgo.generateMST(*g, MSTedges);  
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
