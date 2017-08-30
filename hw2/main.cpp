@@ -35,12 +35,13 @@ int main(int argc, const char * argv[]) {
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        class MST minst(g.vertex_number(),MSTedges);
-        minst.show();
+        g=*new class MST(g.vertex_number(),MSTedges); // derivated
+        g.show();
+
     }
     else
     {
-        cout<<"program can't opened"<<endl;
+        cout<<"file can't opened"<<endl;
     }
     infile.close();
     return 0;
