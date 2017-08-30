@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
         cout<<cost<<endl;
         cout<<"=========="<<endl;
         g=new class MST(g->vertex_number(),MSTedges); // polymorphism with minimum spanning tree
-        g->show();
+        g->show(); // show the minimum spanning tree  matrix
 
     }
     else
