@@ -37,9 +37,9 @@ private:
         {0, -1}, {0, 1},  // left, right
         {1, -1}, {1, 0},  // buttom left, buttom right
     };
-    const static char Blue = 'B';
-    const static char Red = 'R';
-    const static char Blank = '.';
+    const  char Blue = 'B';
+    const  char Red = 'R';
+    const  char Blank = '.';
     std::vector<bool> flags;
     std::string line;
     
