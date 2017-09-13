@@ -10,3 +10,5 @@ hw1:Implement Dijkstra's Algorithm
 
 
 hw2:Kruskal's Algorithm MST
+
+hw3:Hex game (Using BFS to check win or not)
