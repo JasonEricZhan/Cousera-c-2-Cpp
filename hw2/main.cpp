@@ -35,8 +35,21 @@ int main(int argc, const char * argv[]) {
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        g=new class MST(g->vertex_number(),MSTedges); // polymorphism with minimum spanning tree
+        g=new class MST(g->vertex_number(),MSTedges); 
         g->show(); // show the minimum spanning tree  matrix
+        
+        /*
+        graph g=graph::graph(infile);
+        g.show();
+        class kruskal MST;
+        cost=MST.generateMST(g, MSTedges);
+        cout<<"=========="<<endl;
+        cout<<cost<<endl;
+        cout<<"=========="<<endl;
+        g=MST::MST(g.vertex_number(),MSTedges);
+        g.show();
+        */
+
 
     }
     else
