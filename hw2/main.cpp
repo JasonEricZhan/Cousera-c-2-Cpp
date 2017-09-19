@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     if ( infile.is_open() )
     {
         //read the file and initailize the graph;
-        class graph *g=new class graph(infile);
+        class graph *g=new graph(infile);
         g->show();   // show the graph matrix
         class kruskal MSTalgo;
         cost=MSTalgo.generateMST(*g, MSTedges);  
