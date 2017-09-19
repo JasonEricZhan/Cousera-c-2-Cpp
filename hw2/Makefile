@@ -10,14 +10,10 @@ disjoint_set.o:  disjoint_set.hpp disjoint_set.cpp
 graph.o: graph.hpp graph.cpp
 	$(CC) $(CFLAGS) graph.cpp
 
-MST.o: graph.hpp  kruskal_algo.hpp MST.hpp  MST.cpp
-	$(CC) $(CFLAGS) MST.cpp
+main: main.o  kruskal_algo.o disjoint_set.o  graph.o 
+	$(CC) kruskal_algo.o disjoint_set.o  graph.o  main.o -o main
 
-
-main: main.o  kruskal_algo.o disjoint_set.o  graph.o MST.o
-	$(CC) kruskal_algo.o disjoint_set.o  graph.o MST.o main.o -o main
-
-main.o: kruskal_algo.hpp   disjoint_set.hpp graph.hpp MST.hpp main.cpp
+main.o: kruskal_algo.hpp disjoint_set.hpp graph.hpp main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
 
