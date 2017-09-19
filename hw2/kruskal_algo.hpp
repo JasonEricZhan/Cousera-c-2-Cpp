@@ -26,15 +26,17 @@ struct EdgeNode
     }
 };
 
-class kruskal
+class kruskal_MST:public graph
 {
     
 public:
-    kruskal();
-    int generateMST(graph g, std::vector<EdgeNode> &MSTedges);
-    ~kruskal();
+    kruskal_MST(){};
+    kruskal_MST(int verticeNum);
+    int generateMST(graph g);
+    ~kruskal_MST();
 
 private:
+    std::vector<EdgeNode> MSTedges;
     std::vector<EdgeNode> record;
 };
 
