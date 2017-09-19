@@ -11,9 +11,36 @@
 
 
 
-kruskal::kruskal()
+kruskal_MST::kruskal_MST(int verticeNum)
 {
-    ;
+    adMatrix = vector<vector<int> >(verticeNum, vector<int>(verticeNum));
+    costMatrix = vector<vector<double> >(verticeNum, vector<double>(verticeNum));
+    vertexqueue=vector<vertex>(verticeNum);
+    int n=static_cast<int>(costMatrix.size());
+    for(int i=0;i<n;i++)
+    {
+        vertexqueue[i].parent=-1;
+        vertexqueue[i].distance=numeric_limits<double>::infinity();
+        for(int j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                costMatrix[i][i]=0.00;
+            }
+            else
+            {
+                costMatrix[i][j]=numeric_limits<double>::infinity();
+            }
+        }
+    }
+    n=static_cast<int>(MSTedges.size());
+    
+    
+    for(int i=0;i<n;i++)
+    {
+        add_edge(MSTedges[i].v1,MSTedges[i].v2,MSTedges[i].weight);
+    }
+
 }
 
 bool weightcompare(const EdgeNode a,const EdgeNode b)
@@ -21,7 +48,7 @@ bool weightcompare(const EdgeNode a,const EdgeNode b)
     return a.weight < b.weight;
 }
 
-int kruskal::generateMST(graph g, std::vector<EdgeNode> &MSTedges)
+int kruskal_MST::generateMST(graph g)
 {
     
     int verticeNum = g.vertex_number();
@@ -57,7 +84,7 @@ int kruskal::generateMST(graph g, std::vector<EdgeNode> &MSTedges)
     return weight_sum;
 }
 
-kruskal::~kruskal()
+kruskal_MST::~kruskal_MST()
 {
     ;
 }
