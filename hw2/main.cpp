@@ -28,27 +28,16 @@ int main(int argc, const char * argv[]) {
     if ( infile.is_open() )
     {
         //read the file and initailize the graph;
-        class graph *g=new graph(infile);
-        g->show();   // show the graph matrix
-        class kruskal MSTalgo;
-        cost=MSTalgo.generateMST(*g, MSTedges);  
+        class graph *G=new graph(infile);
+        G->show();
+        class kruskal_MST MST(G->vertex_number());
+        cost=MST.generateMST(*G);
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        g=new class MST(g->vertex_number(),MSTedges); 
-        g->show(); // show the minimum spanning tree  matrix
         
-        /*
-        graph g=graph::graph(infile);
-        g.show();
-        class kruskal MST;
-        cost=MST.generateMST(g, MSTedges);
-        cout<<"=========="<<endl;
-        cout<<cost<<endl;
-        cout<<"=========="<<endl;
-        g=MST::MST(g.vertex_number(),MSTedges);
-        g.show();
-        */
+        
+        MST.show();
 
 
     }
