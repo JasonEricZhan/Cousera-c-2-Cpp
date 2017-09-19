@@ -27,7 +27,7 @@ public:
     graph(){}   //need to add {},because not in cpp
     graph(int verticeNum);
     graph(int verticeNum, double density);
-    graph(ifstream & file);
+    graph(ifstream & file) ;
     int vertex_number();
     int edge_number();
     bool isadjacent(int v1,int v2);
@@ -42,11 +42,14 @@ public:
     
     int edge_num;
     
+    friend class kruskal_MST;
     
     std::vector<vertex> vertexqueue;
-protected:
+    
+private:
     std::vector<std::vector<int> > adMatrix;
     std::vector<std::vector<double> > costMatrix;
+
     
 };
 
