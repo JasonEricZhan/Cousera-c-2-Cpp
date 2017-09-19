@@ -19,7 +19,7 @@ public:
     MST(){}
     MST(int verticeNum,std::vector<EdgeNode> &MSTedge);
     
-    virtual ~MST(){};
+   ~MST(){};
     
 
 };
