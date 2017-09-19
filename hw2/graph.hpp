@@ -38,7 +38,7 @@ public:
     void setedge_value(int v1,int v2,int value);
     void show();
     
-    ~graph();
+    virtual ~graph();
     
     int edge_num;
     
