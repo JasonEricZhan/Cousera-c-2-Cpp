@@ -22,7 +22,7 @@ struct vertex
 class graph
 {
 public:
-    graph(){}   //need to add {},because not in cpp
+    graph(){edge_num=0;};   //need to add {},because not in cpp
     graph(int verticeNum);
     graph(int verticeNum, double density);
     int vertex_number();
@@ -36,11 +36,11 @@ public:
     ~graph();
 
 
-    int edge_num;
     
 
     std::vector<vertex> vertexqueue;
 private:
+    int edge_num;
     std::vector<std::vector<int> > adMatrix;
     std::vector<std::vector<double> > costMatrix;
     
