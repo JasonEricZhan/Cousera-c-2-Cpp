@@ -17,7 +17,7 @@ enum class player { BlUE, RED };
 class hexboard
 {
 public:
-    hexboard();
+    hexboard(){size=0;};
     hexboard(int size);
     void play(int x,int y, player side);
     bool isBlank(int x,int y);
