@@ -24,7 +24,7 @@ struct vertex
 class graph
 {
 public:
-    graph(){}   //need to add {},because not in cpp
+    graph(){edge_num=0;};   //need to add {},because not in cpp
     graph(int verticeNum);
     graph(int verticeNum, double density);
     graph(ifstream & file) ;
@@ -40,13 +40,12 @@ public:
     
     virtual ~graph();
     
-    int edge_num;
-    
     friend class kruskal_MST;
     
     std::vector<vertex> vertexqueue;
     
 private:
+    int edge_num;
     std::vector<std::vector<int> > adMatrix;
     std::vector<std::vector<double> > costMatrix;
 
