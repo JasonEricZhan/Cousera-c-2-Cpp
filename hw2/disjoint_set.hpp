@@ -15,7 +15,7 @@
 class disjointset
 {
 public:
-    disjointset() {}
+    disjointset() {};
     
     disjointset(int setNum);
     
