@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
         
         MST.show();
 
-
+        delete G;G=NULL;
     }
     else
     {
