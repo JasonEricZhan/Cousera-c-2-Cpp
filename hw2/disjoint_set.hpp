@@ -27,7 +27,7 @@ public:
     
     ~disjointset();
     
-
+private:
     std::vector<int> sets;
 };
 
