@@ -43,10 +43,47 @@ kruskal_MST::kruskal_MST(int verticeNum)
 
 }
 
-bool weightcompare(const EdgeNode a,const EdgeNode b)
+inline bool weightcompare(const EdgeNode a,const EdgeNode b)
 {
     return a.weight < b.weight;
 }
+
+
+
+void kruskal_MST::setMST(int verticeNum,std::vector<EdgeNode> &MSTedge)
+{
+    
+    adMatrix = vector<vector<int> >(verticeNum, vector<int>(verticeNum));
+    costMatrix = vector<vector<double> >(verticeNum, vector<double>(verticeNum));
+    vertexqueue=vector<vertex>(verticeNum);
+    int n=static_cast<int>(costMatrix.size());
+    for(int i=0;i<n;i++)
+    {
+        vertexqueue[i].parent=-1;
+        vertexqueue[i].distance=numeric_limits<double>::infinity();
+        for(int j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                costMatrix[i][i]=0.00;
+            }
+            else
+            {
+                costMatrix[i][j]=numeric_limits<double>::infinity();
+            }
+        }
+    }
+    n=static_cast<int>(MSTedge.size());
+    
+    
+    for(int i=0;i<n;i++)
+    {
+        add_edge(MSTedge[i].v1,MSTedge[i].v2,MSTedge[i].weight);
+    }
+    
+}
+
+
 
 int kruskal_MST::generateMST(graph g)
 {
@@ -79,7 +116,7 @@ int kruskal_MST::generateMST(graph g)
                                       , g.getedge_value(edges[i].v1,edges[i].v2)));
         }
     }
-    
+    setMST(en,MSTedges);
     
     return weight_sum;
 }
