@@ -28,14 +28,14 @@ int main(int argc, const char * argv[]) {
     if ( infile.is_open() )
     {
         //read the file and initailize the graph;
-        class graph *G=new graph(infile);
+        graph *G=new graph(infile);
         G->show();
+        
         class kruskal_MST MST(G->vertex_number());
         cost=MST.generateMST(*G);
         cout<<"=========="<<endl;
         cout<<cost<<endl;
         cout<<"=========="<<endl;
-        
         
         MST.show();
 
