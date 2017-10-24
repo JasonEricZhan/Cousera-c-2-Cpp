@@ -116,7 +116,7 @@ int kruskal_MST::generateMST(graph g)
                                       , g.getedge_value(edges[i].v1,edges[i].v2)));
         }
     }
-    setMST(en,MSTedges);
+    setMST(g.vertex_number(),MSTedges);
     
     return weight_sum;
 }
