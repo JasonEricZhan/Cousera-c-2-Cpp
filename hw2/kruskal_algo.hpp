@@ -33,6 +33,7 @@ public:
     kruskal_MST(){};
     kruskal_MST(int verticeNum);
     int generateMST(graph g);
+    void setMST(int verticeNum,std::vector<EdgeNode> &MSTedge);
     ~kruskal_MST();
 
 private:
